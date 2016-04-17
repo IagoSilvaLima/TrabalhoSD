@@ -1,0 +1,6 @@
+c:\users\iago\documents\visual studio 2015\Projects\IagosServerTcp\Servidor\bin\Debug\Servidor.exe.config
+c:\users\iago\documents\visual studio 2015\Projects\IagosServerTcp\Servidor\bin\Debug\Servidor.exe
+c:\users\iago\documents\visual studio 2015\Projects\IagosServerTcp\Servidor\bin\Debug\Servidor.pdb
+c:\users\iago\documents\visual studio 2015\Projects\IagosServerTcp\Servidor\obj\Debug\Servidor.csprojResolveAssemblyReference.cache
+c:\users\iago\documents\visual studio 2015\Projects\IagosServerTcp\Servidor\obj\Debug\Servidor.exe
+c:\users\iago\documents\visual studio 2015\Projects\IagosServerTcp\Servidor\obj\Debug\Servidor.pdb

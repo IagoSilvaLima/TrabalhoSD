@@ -1,0 +1,9 @@
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\bin\Debug\ClienteTcp.exe.config
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\bin\Debug\ClienteTcp.exe
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\bin\Debug\ClienteTcp.pdb
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.csprojResolveAssemblyReference.cache
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.Form1.resources
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.Properties.Resources.resources
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.csproj.GenerateResource.Cache
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.exe
+c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.pdb
