@@ -14,7 +14,6 @@ namespace Servidor
         private static int tamanhoNomeArquivo = 4;
         private static int NomeArquivo = 100;
         private static int tamanhoBuffer =1024*5 + tamanhoNomeArquivo + NomeArquivo;
-        public static string mensagemCliente;
         public static string mensagemServidor;
 
         public static void Iniciar(int porta)
@@ -24,8 +23,8 @@ namespace Servidor
             IPEndPoint server = new IPEndPoint(ipAddress, porta);
             Socket listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-            try
-            {
+
+            try { 
                 listener.Bind(server);
                 listener.Listen(10);
 
@@ -33,23 +32,14 @@ namespace Servidor
                 {
                     Console.WriteLine("Aguardando requisições");
                     Socket client = listener.Accept();
-                    mensagemCliente = string.Empty;
+        
                     int bytesRec = client.Receive(bytes);
 
-                    int sizeNameFile = BitConverter.ToInt32(bytes, 0);
-                    string fileName = Encoding.UTF8.GetString(bytes, 4, sizeNameFile);
-                    string path = "C:\\Users\\Iago\\Documents\\"+fileName;
-                    int metadados = 4 + fileName.Length;
-                    BinaryWriter binaryWriter =new BinaryWriter(File.Open(path, FileMode.Create, FileAccess.Write));
-                    binaryWriter.Write(bytes, metadados ,bytesRec -metadados);
-                    //mensagemCliente += Encoding.ASCII.GetString(bytes, 0, bytesRec);
+                    var operacao = FabricaOperacao.GetInstance(2);
 
-                    //Console.WriteLine("Texto recebido:{0}", mensagemCliente);
-                    Console.WriteLine(fileName + "recebido com sucesso");
-
-                    byte[] msg = Encoding.ASCII.GetBytes(fileName + "recebido com sucesso"); ;
-                    client.Send(msg);
-                    binaryWriter.Close();
+                    operacao.Executar(bytes, client, bytesRec);
+                    
+                    
                     client.Shutdown(SocketShutdown.Both);
                     client.Close();
                 }

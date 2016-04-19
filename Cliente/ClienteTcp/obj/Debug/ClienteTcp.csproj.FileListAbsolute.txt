@@ -7,3 +7,14 @@ c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\De
 c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.csproj.GenerateResource.Cache
 c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.exe
 c:\users\iago\documents\visual studio 2015\Projects\ClienteTcp\ClienteTcp\obj\Debug\ClienteTcp.pdb
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\bin\Debug\ClienteTcp.exe.config
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Debug\ClienteTcp.exe
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Debug\ClienteTcp.pdb
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\bin\Debug\ClienteTcp.exe
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\bin\Debug\ClienteTcp.pdb
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Debug\ClienteTcp.csprojResolveAssemblyReference.cache
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Debug\ClienteTcp.FPrincipal.resources
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Debug\ClienteTcp.FUpload.resources
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Debug\ClienteTcp.Properties.Resources.resources
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Debug\ClienteTcp.csproj.GenerateResource.Cache
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Debug\ClienteTcp.FDownload.resources
