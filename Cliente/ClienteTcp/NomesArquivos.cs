@@ -12,25 +12,45 @@ namespace ClienteTcp
     public class NomesArquivos : IOperacao
     {
         private ComboBox cArquivos;
+        private byte[] enviado;
+        private byte[] recebido;
+        
 
         public NomesArquivos(ComboBox arquivos)
         {
             this.cArquivos = arquivos;
         }
-        public void Executar(Socket socket, IPEndPoint server)
-        {
-            byte[] teste = new byte[1];
-            socket.Connect(server);
-            socket.Send(teste);
 
-            byte[] bRecebido = new byte[1000];
-            int tamRecebido = socket.Receive(bRecebido);
-            string arquivos = Encoding.UTF8.GetString(bRecebido, 0, tamRecebido);
+
+        public void AntesdaConexao()
+        {
+            byte[] op = BitConverter.GetBytes(2);
+            op.CopyTo(bytesEnviados(), 0);
+        }
+
+        public byte[] bytesEnviados()
+        {
+            if (enviado == null)
+                enviado = new byte[4];
+            return enviado; 
+        }
+
+        public byte[] bytesRecebidos()
+        {
+            if (recebido == null)
+                recebido = new byte[200];
+            return recebido;
+        }
+
+        public void DepoisdaConexao(int tamRecebido)
+        {
+            string arquivos = Encoding.UTF8.GetString(bytesRecebidos(), 0, tamRecebido);
             string[] aArquivos = arquivos.Split(',');
             foreach (var s in aArquivos)
             {
                 cArquivos.Items.Add(s);
             }
         }
+
     }
 }

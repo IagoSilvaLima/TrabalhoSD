@@ -43,17 +43,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EnviarArquivo.cs" />
-    <Compile Include="FabricaOperacao.cs" />
-    <Compile Include="IOperacao.cs" />
-    <Compile Include="ListaArquivos.cs" />
+    <Compile Include="Operacoes\EnviarArquivo.cs" />
+    <Compile Include="Fabrica\FabricaOperacao.cs" />
+    <Compile Include="Interfaces\IOperacao.cs" />
+    <Compile Include="Operacoes\ListaArquivos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReceberArquivo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Operacoes\ReceberArquivo.cs" />
     <Compile Include="SocketServidor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

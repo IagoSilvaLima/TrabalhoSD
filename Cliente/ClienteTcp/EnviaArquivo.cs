@@ -12,33 +12,65 @@ namespace ClienteTcp
     public class EnviaArquivo : IOperacao
     {
         private string caminhoArquivo;
-        private byte[] bConteudo;
+        private byte[] enviado;
+        private byte[] recebido;
 
         public EnviaArquivo(string caminhoArquivo)
         {
             this.caminhoArquivo = caminhoArquivo;
-            bConteudo = new byte[6000];
         }
 
-        public void Executar(Socket socket,IPEndPoint server)
+        public byte[] bytesEnviados()
         {
+            if (enviado == null)
+                enviado = new byte[1024 * 5000];
+            return enviado;
+        }
+
+        public byte[] bytesRecebidos()
+        {
+            if (recebido == null)
+                enviado = new byte[100];
+            return enviado;
+        }
+
+        public void AntesdaConexao()
+        {
+            byte[] op = BitConverter.GetBytes(1);
+            op.CopyTo(bytesEnviados(), 0);
+
             byte[] bArquivo = null;
             bArquivo = File.ReadAllBytes(caminhoArquivo);
             string nomeArquivo = Path.GetFileName(caminhoArquivo);
             byte[] bTamNomeAqr = BitConverter.GetBytes(nomeArquivo.Length);
             byte[] bNomeArq = Encoding.UTF8.GetBytes(nomeArquivo);
-            int metadados = 4 + nomeArquivo.Length;
-            bTamNomeAqr.CopyTo(bConteudo, 0);
-            bNomeArq.CopyTo(bConteudo, 4);
-            bArquivo.CopyTo(bConteudo, metadados);
+            int metadados = 8 + nomeArquivo.Length;
 
-            socket.Connect(server);
-            socket.Send(bConteudo, bArquivo.Length + metadados, SocketFlags.None);
+            bTamNomeAqr.CopyTo(bytesEnviados(), 4);
+            bNomeArq.CopyTo(bytesEnviados(), 8);
+            bArquivo.CopyTo(bytesEnviados(), metadados);
+        }
 
-            byte[] bRecebido = new byte[300];
-            int tamRecebido = socket.Receive(bRecebido);
-            string sRecebido = Encoding.UTF8.GetString(bRecebido,0,tamRecebido);
+        public void DepoisdaConexao(int tamRecebido)
+        {
+            string sRecebido = Encoding.UTF8.GetString(bytesRecebidos(), 0, tamRecebido);
             Console.WriteLine(sRecebido);
         }
+
+        public void Executar(Socket socket,IPEndPoint server)
+        {
+            
+
+            //socket.Connect(server);
+            //socket.Send(bConteudo, bArquivo.Length + metadados, SocketFlags.None);
+
+            //byte[] bRecebido = new byte[300];
+            //int tamRecebido = socket.Receive(bRecebido);
+            //string sRecebido = Encoding.UTF8.GetString(bRecebido,0,tamRecebido);
+            //Console.WriteLine(sRecebido);
+        }
+        
+
+        
     }
 }

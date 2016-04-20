@@ -10,6 +10,9 @@ namespace ClienteTcp
 {
     public interface IOperacao
     {
-        void Executar(Socket socket, IPEndPoint server);
+        Byte[] bytesEnviados();
+        Byte[] bytesRecebidos();
+        void AntesdaConexao();
+        void DepoisdaConexao(int tamRecebido);
     }
 }

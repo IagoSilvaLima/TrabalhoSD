@@ -10,7 +10,16 @@ namespace Servidor
     {
         static void Main(string[] args)
         {
-            SocketServidor.Iniciar(6060);
+            try
+            {
+                SocketServidor.Iniciar(6060);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            
         }
     }
 }

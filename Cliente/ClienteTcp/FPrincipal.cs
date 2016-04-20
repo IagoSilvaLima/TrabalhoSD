@@ -27,20 +27,36 @@ namespace ClienteTcp
 
         private void uploadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var upload = new FUpload(socket);
-            upload.ShowDialog();
+            Tela(new FUpload(socket));
+            
         }
 
         private void downloadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var download = new FDownload(socket);
-            download.ShowDialog();
+            Tela(new FDownload(socket));
         }
 
         private void btSave_Click(object sender, EventArgs e)
         {
             int port = Convert.ToInt32(tbPort.Text);
             socket = new SocketCliente(port, tbAddress.Text);
+        }
+
+        private void Tela(Form form)
+        {
+            try
+            {
+                using (form)
+                {
+                    form.ShowDialog();
+                }
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Ooccreu um erro " + e.Message);
+            }
+            
         }
     }
 }

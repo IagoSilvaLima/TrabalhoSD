@@ -26,6 +26,10 @@ namespace ClienteTcp
             socket.StartClient(new NomesArquivos(comboBox1));
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            socket.StartClient(new ReceberArquivo(comboBox1.SelectedItem.ToString()));
+        }
     }
 }

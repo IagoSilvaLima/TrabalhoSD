@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Servidor.Interfaces;
+using Servidor.Properties;
 using System.IO;
-using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Servidor
+namespace Servidor.Operacoes
 {
     public class ListaArquivos : IOperacao
     {
         public void Executar(byte[] dados, Socket socket, int tamanhoDados)
         {
-            string[] aArquivos = Directory.GetFiles("C:\\Users\\Iago\\Documents\\");
+            string[] aArquivos = Directory.GetFiles(Resources.Caminho);
 
             for(var i = 0; i < aArquivos.Length; i++)
             {

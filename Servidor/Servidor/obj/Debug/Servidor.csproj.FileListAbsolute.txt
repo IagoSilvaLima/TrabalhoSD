@@ -10,3 +10,5 @@ C:\Users\Iago\Documents\Git\TrabalhoSd\Servidor\Servidor\obj\Debug\Servidor.pdb
 C:\Users\Iago\Documents\Git\TrabalhoSd\Servidor\Servidor\bin\Debug\Servidor.exe
 C:\Users\Iago\Documents\Git\TrabalhoSd\Servidor\Servidor\bin\Debug\Servidor.pdb
 C:\Users\Iago\Documents\Git\TrabalhoSd\Servidor\Servidor\obj\Debug\Servidor.csprojResolveAssemblyReference.cache
+C:\Users\Iago\Documents\Git\TrabalhoSd\Servidor\Servidor\obj\Debug\Servidor.Properties.Resources.resources
+C:\Users\Iago\Documents\Git\TrabalhoSd\Servidor\Servidor\obj\Debug\Servidor.csproj.GenerateResource.Cache

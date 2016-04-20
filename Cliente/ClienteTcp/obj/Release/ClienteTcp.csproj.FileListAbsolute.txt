@@ -1,0 +1,11 @@
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\bin\Release\ClienteTcp.exe.config
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Release\ClienteTcp.csprojResolveAssemblyReference.cache
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Release\ClienteTcp.FDownload.resources
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Release\ClienteTcp.FPrincipal.resources
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Release\ClienteTcp.FUpload.resources
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Release\ClienteTcp.Properties.Resources.resources
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Release\ClienteTcp.csproj.GenerateResource.Cache
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\bin\Release\ClienteTcp.exe
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\bin\Release\ClienteTcp.pdb
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Release\ClienteTcp.exe
+C:\Users\Iago\Documents\Git\TrabalhoSd\Cliente\ClienteTcp\obj\Release\ClienteTcp.pdb

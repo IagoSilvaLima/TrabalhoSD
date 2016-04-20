@@ -28,19 +28,13 @@ namespace ClienteTcp
         {
             IPAddress ipAddress = IPAddress.Parse(Host);
             IPEndPoint serverRemote = new IPEndPoint(ipAddress,Port);
-            Socket sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            
-            try {
-                operacao.Executar(sender, serverRemote);
-            }
-            catch(Exception e)
+            using (var sender = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
             {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                sender.Shutdown(SocketShutdown.Both);
-                sender.Close();
+                operacao.AntesdaConexao();
+                sender.Connect(serverRemote);
+                sender.Send(operacao.bytesEnviados());
+                int tamRecebidos = sender.Receive(operacao.bytesRecebidos());
+                operacao.DepoisdaConexao(tamRecebidos);
             }
         }
     }
